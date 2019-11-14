@@ -30,7 +30,8 @@
     "autohotkey",
     "machine",
     "learning",
-    "color"
+    "color",
+    "node12"
   ],
   "author": "Jason Stallings",
   "license": "MIT",
