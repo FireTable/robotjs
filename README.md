@@ -12,8 +12,8 @@ This is a work in progress so the exported functions could change at any time be
 
 <p align="center"><a href="https://twitter.com/robotjavascript"><img width="300" src="https://cldup.com/Et-C6_ue45.png"></a><a href="http://blog.robotjs.io"><img width="300" src="https://cldup.com/3apDirNmSB.png"></a></p>
 
-## Support From
-[here](https://github.com/malhotra-sidharth/robotjs)
+## Support
+[malhotra-sidharth](https://github.com/malhotra-sidharth/robotjs)
 
 ## Contents
 
