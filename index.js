@@ -2,7 +2,21 @@ var robotjs = require('./build/Release/robotjs.node');
 
 module.exports = robotjs;
 
-module.exports.screen = {};
+module.exports.screen = {
+    capture: (x, y, width, height) => {
+    //If coords have been passed, use them.
+        if (typeof x !== "undefined" && typeof y !== "undefined" && typeof width !== "undefined" && typeof height !== "undefined")
+        {
+            b = robotjs.captureScreen(x, y, width, height);
+        }
+        else 
+        {
+            b = robotjs.captureScreen();
+        }
+
+        return new bitmap(b.width, b.height, b.byteWidth, b.bitsPerPixel, b.bytesPerPixel, b.image);
+    }
+};
 
 function bitmap(width, height, byteWidth, bitsPerPixel, bytesPerPixel, image) 
 {
@@ -19,18 +33,3 @@ function bitmap(width, height, byteWidth, bitsPerPixel, bytesPerPixel, image)
     };
 
 }
-
-module.exports.screen.capture = function(x, y, width, height)
-{
-    //If coords have been passed, use them.
-    if (typeof x !== "undefined" && typeof y !== "undefined" && typeof width !== "undefined" && typeof height !== "undefined")
-    {
-        b = robotjs.captureScreen(x, y, width, height);
-    }
-    else 
-    {
-        b = robotjs.captureScreen();
-    }
-
-    return new bitmap(b.width, b.height, b.byteWidth, b.bitsPerPixel, b.bytesPerPixel, b.image);
-};
